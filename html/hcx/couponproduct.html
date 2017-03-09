@@ -1,0 +1,140 @@
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>优惠券</title>
+                <?php include('../common/style.html')?>
+                <link rel="stylesheet" href="../../css/hcx/couponproduct-cheep.css"/>
+                <!--[if lt IE 9]>
+                <!--<script src="../lib/html5shiv/html5shiv.min.js"></script>-->
+                <!--<script src="../lib/respond/respond.js"></script>-->
+                <![endif]-->
+            </head>
+            <body class="shop-show" style="background-color: #fff" id="ID">
+
+            <!--页面的整体盒子-->
+            <!--<?php include('./header.html')?>-->
+            <!--&lt;!&ndash;提示文字&ndash;&gt;-->
+            <!--<div style="font-size:12px; text-align:center; color:#999; margin:52px 0px; ">-->
+                <!--&#45;&#45;点餐前出示手机中的优惠券即可享受优惠&#45;&#45;-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash;优惠商品&ndash;&gt;-->
+            <!--<div class="all-shop">-->
+                <!--<ul>-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<img src="http://d3.5ikfc.com/static/thumbs/317/kfc-5ikfc-31_p17.jpg">-->
+                            <!--<div class="info">-->
+                                <!--<div class="tit">-->
+                                    <!--<h3>C17  草莓圣代/巧克力圣代 2017年3月凭肯德基优惠券</h3>-->
+                                    <!--<h2><em>￥</em> 7</h2>-->
+                                <!--</div>-->
+                                <!--<div class="time">有效期至3月31日</div>-->
+                            <!--</div>-->
+                            <!--<span>></span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash;中部切换 快捷栏&ndash;&gt;-->
+            <!--<div class="shortcut">-->
+                <!--<a href="#">首页</a>&nbsp;>&nbsp;-->
+                <!--<a href="#">优惠券</a>-->
+            <!--</div>-->
+
+
+
+            <script type="text/tpl" id="cheep-goods">
+                <!--页面的整体盒子-->
+            <?php include('./header.html')?>
+            <!--提示文字-->
+            <div style="font-size:12px; text-align:center; color:#999; margin:52px 0px 0;" >
+                --点餐前出示手机中的优惠券，即可享受优惠--
+            </div>
+
+            <!--优惠商品-->
+            <div class="all-shop">
+                <ul>
+                {{ each result }}
+                    <li data-id="{{ $value.couponProductId }}">
+                        <a href="#">
+                            {{#$value.couponProductImg}}
+                            <div class="info">
+                                <div class="tit">
+                                    <h3>C17  {{ $value.couponProductName }}</h3>
+                                    <h2><em></em>{{ $value.couponProductPrice }}</h2>
+                                </div>
+                                <div class="time">{{ $value.couponProductTime }}</div>
+                            </div>
+                            <span>></span>
+                        </a>
+                    </li>
+                    {{ /each}}
+                </ul>
+            </div>
+
+            <!--中部切换 快捷栏-->
+            <div class="shortcut">
+                <a href="/index.html">首页</a>&nbsp;>&nbsp;
+                <!--<a href="#">优惠券&nbsp;>&nbsp;{{ result[0].couponId }}</a>-->
+                <a href="#">优惠券&nbsp;>&nbsp;{{ result[0].couponId }}</a>
+
+            </div>
+
+              <!--底部公共部分-->
+            <footer class="footer">
+                <div class="footer-top clearfix">
+                    <a href="#" class="login">登录</a>
+                    <a href="#" class="sign">注册</a>
+                    <a href="javascript:window.scrollTo( 0, 0 );" class="back-Top">
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""/>
+                        返回顶部
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <p class="txt">
+                        <a href="#">手机APP下载</a>
+                        <a href="#">慢慢买手机版</a>
+                        ---掌上比价平台
+                    </p>
+                    <a class="url">m.manmanmai.com</a>
+                </div>
+
+                <!--固定地位的手机app图片-->
+                <div class="fix-app">
+                    <a href="#"><img
+                            src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png"
+                            alt=""/></a>
+                </div>
+                </footer>
+
+            </script>
+
+
+                <!--遮罩层-->
+            <div id="box">
+                <div class="placeholder">
+                    <ul class="imgs">
+
+                    </ul>
+                    <div class="arrow">
+                        <span>&lt;</span>
+                        <span>&gt;</span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/tpl" id="box-banner">
+                {{ each result}}
+                {{#$value.couponProductImg}};
+                {{/each}}
+            </script>
+
+            <?php include('../common/script.html')?>
+            <script src="../../js/hcx/couponproduct-cheep.js"></script>
+        </body>
+    </html>
+

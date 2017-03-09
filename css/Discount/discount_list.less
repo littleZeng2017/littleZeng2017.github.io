@@ -1,0 +1,84 @@
+#cxdiv-box{
+  #cxdiv{
+    max-width: 960px;
+    background-color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+    margin: 0px auto;
+    ul{
+      width: 100%;
+      li{
+        float: left;
+        padding: 10px 0 0 10px;
+        text-align: center;
+        vertical-align: middle;
+        background: none;
+        width: 50%;
+        background: #FFFFFF;
+        border-left: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        background: url(/images/loading.gif) center 70px no-repeat;
+        img{
+          width: 140px;
+          height: 140px;
+        }
+        div.title{
+          color: #333333;
+          word-break: break-all;
+          padding: 0 6px;
+          height: 14px;
+          overflow: hidden;
+          font-size: 14px;
+          margin-top: 10px;
+          line-height: 14px;
+          font-weight: normal;
+          text-align: left;
+          margin-top: 6px;
+          font-weight: bold;
+        }
+        div.subtit{
+          color: #ff6c00;
+          margin-top: 4px;
+          padding: 0 8px;
+          text-align: left;
+          height: 18px;
+          line-height: 18px;
+        }
+        div.info{
+          padding: 6px 8px;
+          font-size: 14px;
+          line-height: 24px;
+        }
+        div.mall{
+          color: #a1a1a1;
+          font-size: 12px;
+          text-align: left;
+        }
+      }
+      li:nth-of-type(2n){
+        border-right: 1px solid #eeeeee;
+      }
+    }
+  }
+}
+#up-box{
+  position: relative;
+  #slideUp2{
+    div{
+      width: 100px;
+      height: 40px;
+      border-radius: 5px;
+      position: absolute;
+      left: 50%;
+      margin-left: -50px;
+      top: -10px;
+      background-color: #3c3c3c;
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+      filter:alpha(opacity=80); /*IE滤镜，透明度50%*/
+      -moz-opacity:0.8; /*Firefox私有，透明度50%*/
+      opacity:0.8;/*其他，透明度50%*/
+    }
+  }
+}

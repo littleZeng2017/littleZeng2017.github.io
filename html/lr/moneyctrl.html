@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>省钱控</title>
+    <!--引入公共样式-->
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="../../css/lr/savemoney.css"/>
+    <link rel="stylesheet" href="../../lib/font-icon/iconfont.css"/>
+    <link rel="stylesheet" href="../../lib/font_mbys7l2uyuiejyvi/iconfont.css"/>
+</head>
+<body>
+<header>
+    <!--省钱控-最新优惠-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-2  ">
+            <a href="http://m.manmanbuy.com" class="left-arrow "/><i class="iconfont icon-fanhui "></i></a>
+        </div>
+        <div class="col-xs-8">
+            <p>省钱控-最新优惠</p>
+        </div>
+        <div class="col-xs-2">
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="header-app">
+                <img src="../../images/header_app.png"  style="width:30px ;height:30px" alt=""/>
+            </a>
+        </div>
+    </div>
+</div>
+</header>
+<!--商品列表-动态渲染-->
+<div class="section_money">
+    <div class="container">
+        <ul id="product-father">
+        <!--商品列表的坑  -->
+        </ul>
+        <!--上一页，下一页，选项框==》底部分页-->
+        <div class="page-select clearfix">
+        <a href="javascript:;" class="a-left f_left">上一页</a>
+        <div class="dropup ">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="page"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+               <!--动态生成li标签-->
+            </ul>
+        </div>
+        <a class="a-right f_right" href="javascript:;">下一页</a>
+       </div>
+    </div>
+</div>
+<footer>
+<!--首页》省钱控-->
+   <div class="footer-nav">
+       <a href="http://m.manmanbuy.com">首页</a>
+       &gt;&nbsp;省钱控
+   </div>
+</footer>
+<div class="f-bottom">
+    <div class="footer_fun clearfix">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="" class="footer_last">
+            <img src="../../images/top.jpg" alt=""/>返回顶部
+        </a>
+    </div>
+    <div class="footer_bottom">
+        <p><a href="#target" class="footer_red">手机APP下载</a><a href="" class="m-phone">慢慢买手机版</a>--掌上比价平台</p>
+        <p class="footer_net">m.manmanbuy.com</p>
+    </div>
+</div>
+<!--固定定位的手机app图片-->
+<div class="fix-app">
+    <a href="#"><img
+            src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png"
+            alt=""/></a>
+</div>
+
+<!--动态渲染产品列表-->
+<script type="text/template" id="product-tpl">
+        {{each list as value i}}
+            <li class="clearfix" >
+                <a href="'http://m.manmanbuy.com/?+'{{value.productId}}'">
+                    <div class="pic">{{#value.productImgSm}}</div>
+                    <div class=" info ">
+                        <div class="title">
+                            {{ value.productName}}
+                            <span>{{ value.productPinkage}}</span>
+                        </div>
+                        <div class="other">
+                            <span class="mall">{{ value.productFrom}}|{{value.productTime}}</span>
+                            <span class="comment"><span class="iconfont icon-pinglun"></span>&nbsp;{{ value.productComCount | format}}</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+      </script>
+<?php include('../common/script.html')?>
+</body>
+</html>

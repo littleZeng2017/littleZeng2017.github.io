@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="./css/haitao.css"/>
+
+</head>
+<body>
+    <div class="haitao_header">
+        <div class="haitao_back" id="haitao_back">
+            <a href="/index.html">
+                <i class="myIcon">&#xe600;</i>
+            </a>
+        </div>
+        <h1>海淘折扣</h1>
+        <div class="haitao_home">
+            <a href="/index.html">
+                <i class="myIcon">&#xe646;</i>
+            </a>
+            <span>app下载</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="haitao_list" id="haitao_list">
+            <ul id="haitao_tpl_list">
+                <!--模板的坑-->
+            </ul>
+        </div>
+        <div class="fanye">
+            <a href="javascript:;" class="Previous" id="Previous">上一页</a>
+            <div class="btn-group dropup">
+                <input type="text" class="btn btn-default selectye" value="">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" id="dropdown-menu">
+                    <!-- Dropdown menu links -->
+                </ul>
+            </div>
+            <a href="javascript:;" class="next" id="next">下一页</a>
+        </div>
+    </div>
+
+    <!--底部 -->
+    <?php include('../common/footer.html')?>
+    <!--模板-->
+    <script type="html/template" id="haitao_tpl">
+        {{each list as haitao}}
+        <li value="{{haitao.productId}}">
+            <!--<input type="text" value="{{haitao.productId}}"/>-->
+            <a href="javascript:;">
+                <div class="pic">
+                    {{#haitao.productImgSm}}
+                </div>
+                <div class="info">
+                    <div class="title">
+                        {{haitao.productName}}
+                        <span>{{haitao.productPinkage}}</span>
+                    </div>
+                    <div class="other">
+                        <span class="haitao_pro_text">{{haitao.productFrom}}</span>
+                        <span class="haitao_icon">
+                            <i></i>
+                            <span id='haitao_pinglun'>{{haitao.productComCount | format}}</span>
+
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+<?php include('../common/script.html')?>
+</body>
+</html>

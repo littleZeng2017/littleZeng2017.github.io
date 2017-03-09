@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <?php include('../common/style.html')?>
+</head>
+<body>
+<div id="ctl00_header1" class="header1 clearfix">
+    <div class="f_left logo">
+        <a href="/index.html">
+            <img src="/images/header_logo.png"></a></div>
+    <div class="f_right appdown">
+        <a href="/index.html">
+            <img src="/images/header_app.png" alt="手机app下载">
+        </a>
+    </div>
+</div>
+
+<div id="ctl00_header2" style="display: none">
+    <div class="wx_tab_wrap">
+        <a href="javascript:;" class="wx_btn_search">搜索</a>
+        <span class="wx_tab_inner">
+                <a href="javascript:;">省钱控</a>
+                <a href="javascript:;">白菜价</a>
+                <a href="javascript:;">正品商城</a>
+        </span>
+        <a href="javascript:void(0);" class="wx_btn_my"></a>
+        <div class="wx_me_pop" style="display: none;">
+            <div class="wx_me_item">
+                <a href="javascript:;" class="wx_me_uc">个人中心</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="" method="get" name="frm" id='form_search'>
+    <div id="ctl00_searchmmb" class="search1 clearfix" >
+        <div class="searchtxt ">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn">
+            <input type="submit" value="搜索">
+        </div>
+    </div>
+</form>
+    <div class="brief">
+
+    </div>
+    <script type='text' id='brief_tpl'>
+            {{ each list as value i }}
+            <div class="briefin " data_id='{{ value.titleId }}' style="background: #ebebeb">
+                <div class="fl_t" data=''>
+                    <a href="javascript:;">{{ value.title }}</a>
+                    </div>
+                     <div class="fl_all clearfix">
+
+                 </div>
+            </div>
+            {{ /each }}
+        </script>
+    <script type='text' id='table_tpl'>
+                        {{ each result as value i }}
+                    <div class='div1'>
+                       <a href="javascript:;" class='{{ value.categoryId }}'>{{ value.category }}</a>
+                    </div>
+                       {{ /each }}
+
+    </script>
+
+<?php include('../common/footer.html')?>
+<?php include('../common/script.html')?>
+</body>
+</html>

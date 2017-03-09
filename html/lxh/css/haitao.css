@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "myIcon";
+  src: url('../font/iconfont.eot?t=1488854309443');
+  /* IE9*/
+  src: url('../font/iconfont.eot?t=1488854309443#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/iconfont.woff?t=1488854309443') format('woff'), /* chrome, firefox */ url('../font/iconfont.ttf?t=1488854309443') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/iconfont.svg?t=1488854309443#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.myIcon {
+  font-family: myIcon;
+}
+.haitao_header {
+  background: #ff841d;
+  height: 44px;
+  color: #FFF;
+  position: relative;
+}
+.haitao_header .haitao_back {
+  width: 50px;
+  height: 44px;
+  text-align: center;
+  float: left;
+}
+.haitao_header .haitao_back a {
+  position: absolute;
+  width: 50px;
+  height: 44px;
+  left: 0;
+}
+.haitao_header .haitao_back a i {
+  font-style: normal;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 44px;
+  text-align: center;
+}
+.haitao_header h1 {
+  text-align: center;
+  font-size: 20px;
+  line-height: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+}
+.haitao_header .haitao_home {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 44px;
+  float: right;
+  right: 5px;
+}
+.haitao_header .haitao_home i {
+  font-style: normal;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: lighter;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+.haitao_header .haitao_home span {
+  position: absolute;
+  top: 25px;
+}
+/*---��Ʒ����---*/
+.container {
+  width: 100%;
+  max-width: 960px;
+  min-width: 360px;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+}
+.container .haitao_list {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.container ul li {
+  max-width: 960px;
+  height: 128px;
+  list-style: none;
+  padding: 14px;
+  border-bottom: 1px solid #ccc;
+}
+.container ul li a {
+  display: block;
+  width: 100%;
+}
+.container ul li a .pic {
+  float: left;
+  width: 110px;
+}
+.container ul li a .pic img {
+  width: 100px;
+  height: 100px;
+}
+.container ul li a .info .title {
+  height: 58px;
+}
+.container ul li a .info .title span {
+  color: #ff6c00;
+}
+.container ul li a .info .other {
+  height: 42px;
+  position: relative;
+}
+.container ul li a .info .other .haitao_pro_text {
+  position: absolute;
+  bottom: 10px;
+}
+.container ul li a .info .other .haitao_icon {
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+  width: 25px;
+  height: 20px;
+}
+.container ul li a .info .other .haitao_icon i {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17'><path fill='#a1a1a1' d='M924.504962 664.898711 97.819886 664.898711c-17.557888 0-31.795147-14.241352-31.795147-31.795147l0-508.732583c0-17.557888 14.238282-31.792077 31.795147-31.792077l241.198387 0 149.664671-149.661601c6.209422-6.212492 14.34266-9.31618 22.478967-9.31618s16.269545 3.102664 22.479991 9.31618L683.306574 92.57788l241.198387 0c17.557888 0 31.795147 14.235213 31.795147 31.792077L956.300109 633.10254C956.300109 650.657358 942.061826 664.898711 924.504962 664.898711zM892.708791 156.169197l-222.569098 0c-8.428973 0-16.518209-3.354398-22.478967-9.31618l-136.498814-136.494721-136.498814 136.494721c-5.961782 5.961782-14.051017 9.31618-22.479991 9.31618l-222.569098 0L129.61401 601.304324l763.093758 0L892.707768 156.169197zM288.592814 378.735226m-63.591317 0a62.143 62.143 0 1 0 127.182634 0 62.143 62.143 0 1 0-127.182634 0ZM511.161912 378.735226m-63.591317 0a62.143 62.143 0 1 0 127.182634 0 62.143 62.143 0 1 0-127.182634 0ZM733.73101 378.735226m-63.591317 0a62.143 62.143 0 1 0 127.182634 0 62.143 62.143 0 1 0-127.182634 0Z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+}
+.container ul li a .info .other .haitao_icon span {
+  position: absolute;
+  right: 0;
+}
+.container .fanye {
+  position: relative;
+}
+.container .fanye a {
+  float: left;
+  width: 82px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  border: 1px solid #eeeeee;
+  background: #efefef;
+  border-radius: 8px;
+}
+.container .fanye .btn-group {
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+}
+.container .fanye .btn-group .selectye {
+  width: 100px;
+}
+.container .fanye .btn-group .dropdown-menu {
+  width: 130px !important;
+}
+.container .fanye .btn-group .dropdown-menu li {
+  width: 130px;
+  height: 10px;
+  line-height: 10px;
+}
+.container .fanye .next {
+  float: right;
+}

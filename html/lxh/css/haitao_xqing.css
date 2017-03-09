@@ -1,0 +1,262 @@
+@font-face {
+  font-family: "myIcon";
+  src: url('../font/iconfont.eot?t=1488854309443');
+  /* IE9*/
+  src: url('../font/iconfont.eot?t=1488854309443#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/iconfont.woff?t=1488854309443') format('woff'), /* chrome, firefox */ url('../font/iconfont.ttf?t=1488854309443') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/iconfont.svg?t=1488854309443#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.myIcon {
+  font-family: myIcon;
+}
+.haitao_header {
+  margin: 0 auto;
+  background: #ff841d;
+  height: 44px;
+  color: #FFF;
+  position: relative;
+}
+.haitao_header .haitao_pro_back {
+  width: 50px;
+  height: 44px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+}
+.haitao_header .haitao_pro_back a {
+  position: absolute;
+  width: 50px;
+  height: 44px;
+  left: 0;
+}
+.haitao_header .haitao_pro_back a i {
+  font-style: normal;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 44px;
+  text-align: center;
+}
+.haitao_header h1 {
+  text-align: center;
+  font-size: 20px;
+  line-height: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+}
+.haitao_header .haitao_home {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 44px;
+  float: right;
+  right: 5px;
+}
+.haitao_header .haitao_home i {
+  font-style: normal;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: lighter;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+.haitao_header .haitao_home span {
+  position: absolute;
+  top: 25px;
+}
+/*��Ʒ����*/
+.haitao_pro {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.haitao_pro h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.haitao_pro h4 {
+  font-size: 14px;
+  color: #ff6c00;
+  font-weight: bold;
+}
+.haitao_pro .haitao_info span {
+  color: #999;
+}
+.haitao_pro .haitao_content p {
+  line-height: 24px;
+  color: #606060;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+.haitao_pro .haitao_content img:nth-of-type(1) {
+  display: block;
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+.haitao_pro .haitao_content img:nth-of-type(2) {
+  text-align: center;
+}
+.haitao_pro .pro_buy {
+  background: #FF9000;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+.haitao_pro .line {
+  margin-top: 30px;
+  height: 1px;
+  background: #ccc;
+}
+.haitao_pro #comment .tit {
+  line-height: 40px;
+}
+.haitao_pro #comment textarea {
+  width: 100%;
+  height: 82px;
+  border: 1px solid #ccc;
+}
+.haitao_pro #comment .ctrl {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-top: none;
+  position: relative;
+  margin-top: -4px;
+}
+.haitao_pro #comment .ctrl #ctl00_ContentBody_Button1 {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 16px;
+  background: #FF9000;
+  color: #fff;
+}
+.haitao_pro #comment #newcomment {
+  height: 30px;
+  line-height: 30px;
+}
+.haitao_pro #comment .list .ui-border-b {
+  padding: 18px 10px;
+  overflow: hidden;
+}
+.haitao_pro #comment .list .ui-border-b .userimg {
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+.haitao_pro #comment .list .ui-border-b .userimg img {
+  width: 40px;
+  height: 40px;
+  background-position: top;
+  border-radius: 20px;
+  float: left;
+}
+.haitao_pro #comment .list .ui-border-b .con {
+  overflow: hidden;
+  padding-left: 10px;
+  float: left;
+}
+.haitao_pro #comment .list .ui-border-b .con .name {
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.haitao_pro #comment .list .ui-border-b .con .name .username {
+  color: #5997c0;
+  float: left;
+}
+.haitao_pro #comment .list .ui-border-b .con .name .time {
+  color: #999999;
+  float: right;
+}
+.haitao_pro #comment .list .ui-border-b .con .content {
+  font-size: 15px !important;
+  color: #606060;
+  line-height: 20px;
+}
+.haitao_pro #comment .list .ui-border-b .con .content .yinyong {
+  background-color: #FBFBFB;
+  border: 1px solid #eeeeee;
+  padding: 4px 6px;
+  border-radius: 3px;
+  margin-top: 2px;
+}
+.mmbweixin2 {
+  width: 100%;
+}
+.haotao_footer {
+  margin-top: 20px;
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.haotao_footer .haitao_index {
+  color: #000;
+  font-size: 16px;
+}
+.haotao_footer i {
+  font-style: normal;
+  font-size: 16px;
+}
+.haotao_footer .tuijian {
+  font-size: 16px;
+  color: #000;
+}
+.haotao_footer .haitao_login {
+  height: 30px;
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  overflow: hidden;
+  clear: both;
+}
+.haotao_footer .haitao_login .login {
+  width: 33.33%;
+  float: left;
+  border-right: 1px solid #ccc;
+}
+.haotao_footer .haitao_login .pinglun {
+  width: 33.33%;
+  float: right;
+  border-left: 1px solid #ccc;
+}
+.haotao_footer .haitao_login .submit {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+.haotao_footer .kongbai {
+  height: 60px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+}
+.haotao_footer .fix {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  line-height: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+.haotao_footer .fix .pLun {
+  float: left;
+  width: 40%;
+  border-right: 1px solid #ccc;
+  font-size: 16px;
+}
+.haotao_footer .fix .f_buy {
+  float: left;
+  width: 60%;
+  background: #FF9000;
+  color: #fff;
+  font-size: 16px;
+}

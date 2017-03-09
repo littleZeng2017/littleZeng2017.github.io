@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="./css/haitao_xqing.css"/>
+</head>
+<body>
+<div class="haitao_header">
+    <div class="haitao_pro_back" id="haitao_pro_back">
+        <a href="javascript:;">
+            <i class="myIcon">&#xe600;</i>
+        </a>
+    </div>
+    <h1>海淘折扣商品详情</h1>
+    <div class="haitao_home">
+        <a href="javascript:;">
+            <i class="myIcon">&#xe646;</i>
+        </a>
+        <span>app下载</span>
+    </div>
+</div>
+<!--商品详情-->
+<div class="haitao_pro" >
+    <div class="pro" id="haitao_pro">
+    <!--模板的坑-->
+    </div>
+    <div class="pro_buy">
+        前往购买
+    </div>
+    <div class="line"></div>
+
+    <div id="comment">
+        <!--模板的第二个坑-->
+    </div>
+
+</div>
+<img src="../../images/mmbweixin2.png" alt="" class="mmbweixin2"/>
+<div class="haotao_footer">
+    <a href="javascript:;" class="haitao_index">首页</a>
+    &nbsp;&nbsp;
+    <i>
+        /
+    </i>
+    <a href="javascript:;" class="tuijian">超值推荐</a>
+    / ZAC Zac Pose...
+    <div class="haitao_login">
+        <div class="login">登录</div>
+        <div class="submit">注册</div>
+        <div class="pinglun">评论</div>
+    </div>
+    <div class="kongbai"></div>
+    <div class="fix">
+        <div class="pLun">评论</div>
+        <div class="f_buy">前往购买</div>
+    </div>
+</div>
+
+
+<script type="html/template" id="hao_pro_tpl">
+    {{each list as pro i}}
+
+        <h3>{{pro.productName}}</h3>
+        <h4>{{pro.productPinkage}}</h4>
+        <div class="haitao_info">
+            <span>{{pro.productFrom}}</span>
+            <span>{{pro.productTime}}</span>
+            <span>{{pro.productTips}}</span>
+
+        </div>
+        <div class="haitao_content">
+            {{#pro.productImgSm}}
+            <p>{{pro.productInfo}}</p>
+            <p>{{pro.productInfo1}}</p>
+            <p>{{pro.productInfo2}}</p>
+            <p></p>
+            <p></p>
+            {{#pro.productImgSm}}
+        </div>
+
+    {{/each}}
+</script>
+<script type="html/template" id="comment_tpl">
+    {{each list as pro i}}
+        {{#pro.productImg3}}
+        {{#pro.productComment}}
+    {{/each}}
+</script>
+<?php include('../common/script.html')?>
+</body>
+</html>

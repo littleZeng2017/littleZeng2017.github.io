@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <?php include('../common/style.html')?>
+</head>
+<body>
+<div id="ctl00_header1" class="header1 clearfix">
+    <div class="f_left logo">
+        <a href="/">
+            <img src="/images/header_logo.png"></a></div>
+    <div class="f_right appdown">
+        <a href="/">
+            <img src="/images/header_app.png" alt="手机app下载">
+        </a>
+    </div>
+</div>
+
+<div id="ctl00_header2" style="display: none">
+    <div class="wx_tab_wrap">
+        <a href="javascript:;" class="wx_btn_search">搜索</a>
+        <span class="wx_tab_inner">
+                <a href="javascript:;">省钱控</a>
+                <a href="javascript:;">白菜价</a>
+                <a href="javascript:;">正品商城</a>
+        </span>
+        <a href="javascript:void(0);" class="wx_btn_my"></a>
+        <div class="wx_me_pop" style="display: none;">
+            <div class="wx_me_item">
+                <a href="javascript:;" class="wx_me_uc">个人中心</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="" method="get" name="frm" id='form_search'>
+    <div id="ctl00_searchmmb" class="search1 clearfix">
+        <div class="searchtxt ">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn">
+            <input type="submit" value="搜索">
+        </div>
+    </div>
+</form>
+
+<div id="content">
+    <script type='text' id='fenlei_tpl'>
+        <div class="nav">
+        <a href="/" class="f12">首页</a> >
+        <a href="/html/wfp/comparePrice.html" class="f12"> 全部分类 </a> >
+        <a class='tiaozhuan' href="javascript:;" class="f12">{{ category }} </a>
+    </div>
+    </script>
+</div>
+<div id="div_ptl"></div>
+<script type='text' id='product_tpl'>
+        <div class="detail-head ui-border-b">
+    <div class="pic">{{ #productImg }}
+        <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39" /></a></div>
+    <div class="tit">{{ productName }}<span></span></div>
+    <div class="inf clearfix" >
+
+    </div>
+</div>
+    <div class="tab">
+        <ul>
+            <li class="cur"><a
+                    href="javascript:;">比价购买</a></li>
+            <li class="mtab ">
+                <a href="javascript:;">产品参数</a></li>
+            <li class=""><a
+                    href="javascript:;">优选评价</a></li>
+        </ul>
+    </div>
+    <div class="tab_ar" id='product'>
+        {{ #bjShop }}
+    </div>
+
+</script>
+<div class="pj_t">
+    <div>网友评价</div>
+</div>
+<div id="pl">
+
+</div>
+    <script type='text' id='pj_tpl'>
+    {{ each list as value i }}
+    <div class="pj_list">
+        <table width="100%">
+        <tr>
+            <td class="name" align="left">{{ value.comName }}  </td>
+            <td align="right">{{ value.comTime }}</td>
+        </tr>
+        <tr>
+            <td align="left"><span class="star"><em class="star3"></em></span></td>
+            <td align="right">  {{ value.comFrom }} </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="pj_C">{{ value.comContent }}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="pj_C">
+                <a href='javascript:;'style='font-size:12px; color:#999;'>回复</a></td>
+        </tr>
+    </table>
+    </div>
+    {{ /each }}
+    </script>
+
+
+<?php include('../common/script.html')?>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买注册</title>
+    <?php include('../common/style.html')?>
+</head>
+<body>
+<?php include('../common/header1.html')?>
+<!--搜索框-->
+<form action="javascript:;" name="frm">
+    <div id="ctl00_searchmmb" class="search1 clearfix">
+        <div class="searchtxt">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn">
+            <input type="submit" value="搜索">
+        </div>
+    </div>
+</form>
+<!--注册框-->
+<form name="aspnetForm" id="aspnetForm">
+    <div style="padding: 8px 10px;">
+        <table class="loginTab">
+            <tbody>
+            <tr>
+                <td>
+                    <input name="ctl00$CPBODY$txtuser" type="text" id="ctl00_CPBODY_txtuser" class="score_t"
+                           value="请输入用户名" onblur="if(this.value=='')this.value='请输入用户名';checkuser();"
+                           onclick="if(this.value=='请输入用户名')this.value='';">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="ctl00$CPBODY$txtpwd" type="text" id="ctl00_CPBODY_txtpwd" class="score_t"
+                           value="密码(6-20个字符)" onblur="if(this.value=='')this.value='密码(6-20个字符)';checkpwd();"
+                           onclick="if(this.value=='密码(6-20个字符)')this.value='';">
+                    <p id="p2" style="color: #C30; font-size: 14px; display: none;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="ctl00$CPBODY$txtmobile" type="text" id="ctl00_CPBODY_txtmobile" class="score_t"
+                           value="请输入手机号" onblur="if(this.value=='')this.value='请输入手机号';checkmobile();"
+                           onclick="if(this.value=='请输入手机号')this.value='';">
+                    <p id="p3" style="color: #C30; font-size: 14px; display: none;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="score_t yzm" name="txtyz" id="txtyz"
+                           style="width: 100px;float: none;margin-right: 0px; ">
+                    <input type="button" class="yz" style="display: inline-block;" value="获取手机验证码" id="btnsend" onclick="getsms()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="score_t " value="请输入手机验证码"
+                           onblur="if(this.value=='')this.value='请输入手机验证码';checkyzm();"
+                           onclick="if(this.value=='请输入手机验证码')this.value='';" id="txtyzm">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="ctl00$CPBODY$txtemail" type="text" id="ctl00_CPBODY_txtemail" class="score_t"
+                           value="请输入邮箱" onblur="if(this.value=='')this.value='请输入邮箱';checkemail();"
+                           onclick="if(this.value=='请输入邮箱')this.value='';">
+                    <p id="p5" style="color: #C30; font-size: 14px; display: none;">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 3px;">
+                    <input type="submit" name="ctl00$CPBODY$Button1" value="注册" onclick="return checkall();"
+                           id="ctl00_CPBODY_Button1" class="login">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
+<!--脚部-->
+<div id="ctl00_footerApp">
+    <div class="foot_top">
+        <a href="/html/User/login.html">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%; border: 0;">
+            <img src="/images/top.jpg" width="15" height="15">返回顶部</a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a>
+            <a href="javascript:;">
+                慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com
+            <img src="/images/top.jpg" width="0" height="0">
+        </p>
+    </div>
+</div>
+<?php include('../common/script.html')?>
+</body>
+</html>

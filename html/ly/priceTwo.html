@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>品牌大全第二页面</title>
+    <link rel="stylesheet" href="/css/priceTwo.css">
+    <?php include('../common/style.html')?>
+</head>
+<body>
+<?php include('../common/header1.html')?>
+<div class="boxtwo">
+    <!-- 品牌列表-->
+    <div class="two_header">
+        <a href="">首页</a>
+        >
+        <a href="priceTwo.html">全部分类</a>
+        >
+        品牌列表
+    </div>
+
+    <div class="two_nav">
+        <div class="two_title">热门品牌排行1</div>
+        <div class="two_lis">
+            <ul>
+            <!-- 获取牌子排行的信息的坑-->
+            </ul>
+        </div>
+    </div>
+    <!-- 商品展示-->
+    <div class="two_sales">
+        <div class="two_title">热门品牌排行2</div>
+        <div class="sales_lis">
+            <ul>
+                <!-- 获取到商品信息的数据的坑-->
+            </ul>
+        </div>
+    </div>
+    <!-- 评论版块-->
+    <div class="two_users">
+        <div class="two_title">用户评论</div>
+        <div class="users_lis">
+            <ul>
+              <!-- 用户评论信息列表-->
+            </ul>
+        </div>
+    </div>
+</div>
+<!--获取到牌子排行的数据的模板-->
+<script type="text/template" id="twoone">
+    {{each result as value i}}
+    <li class="twoList">
+        <a href="{{value.brandTitleId}}">
+            <em class="lis_one lis_one{{i+1}}">{{i+1}}</em>
+            <div class="lis_inner">
+                <div class="lis_title">{{value.brandName}}</div>
+                <p>{{value.brandInfo}}</p>
+            </div>
+            <span></span>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--获取到商品信息的数据模板-->
+<script type="text/template" id='twotwo'>
+    {{each result as value}}
+    <li data-id='{{value.productId}}'>
+        <a href="">
+            <div class="sales_left">
+                 {{#value.productImg}}
+            </div>
+            <div class="sales_right">
+                <div class="right_top">
+                    {{value.productName}}
+                </div>
+                <div class="right_sarts">
+                    <em class="nub">{{value.productPrice}}</em>
+                    <span class="sarts">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </span>
+                </div>
+                <div class="right_button">
+                    <em>{{value.productQuote}}</em>
+                    <em>{{value.productCom}}</em>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--获取到用户的评论-->
+<script type="text/template" id='twothree'>
+    {{each result as value}}
+    <li>
+        <a href="">
+            <div class="users_top">
+                <div class="pic"> {{#productImg}}</div>
+                <div class="tit"> {{productName}}</div>
+            </div>
+        </a>
+        <div class="users_button">
+            <a href="">
+                <div class="users_name">
+                    <span class="name">{{value.comName}}:</span>
+                    <span class="stars">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </span>
+                    <i class="time">{{value.comTime}}</i>
+                </div>
+                <div class="usersword">
+                  {{value.comContent}}
+                </div>
+            </a>
+        </div>
+    </li>
+    {{/each}}
+
+</script>
+<?php include('../common/footer.html')?>
+<?php include('../common/script.html')?>
+</body>
+</html>

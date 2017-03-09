@@ -1,0 +1,246 @@
+.boxtwo {
+  border: 1px solid #ccc;
+  height: 100%;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.boxtwo .two_header {
+  height: 38px;
+  width: 100%;
+  line-height: 38px;
+  padding-left: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+}
+.boxtwo .two_header a {
+  font-size: 16px;
+  line-height: 38px;
+  color: #5A5A5A;
+}
+.boxtwo .two_nav {
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+.boxtwo .two_nav .two_title {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  margin: 8px 0px;
+  font-size: 15px;
+  padding-left: 15px;
+  color: #874604;
+}
+.boxtwo .two_nav .two_lis {
+  width: 100%;
+}
+.boxtwo .two_nav .two_lis ul {
+  width: 100%;
+  padding: 0px 10px;
+}
+.boxtwo .two_nav .two_lis ul li {
+  padding: 5px 0px;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.boxtwo .two_nav .two_lis ul li a {
+  display: inline-block;
+  width: 100%;
+}
+.boxtwo .two_nav .two_lis ul li a .lis_one {
+  height: 20px;
+  width: 20px;
+  background-color: #C9C9C9;
+  float: left;
+  color: #F2F2F2;
+  line-height: 20px;
+  text-align: center;
+}
+.boxtwo .two_nav .two_lis ul li a .lis_one1 {
+  background-color: #e32932;
+}
+.boxtwo .two_nav .two_lis ul li a .lis_one2 {
+  background-color: #FF9314 ;
+}
+.boxtwo .two_nav .two_lis ul li a .lis_one3 {
+  background-color: #8ADF5B ;
+}
+.boxtwo .two_nav .two_lis ul li a .lis_one4 {
+  background-color: #C9C9C9 ;
+}
+.boxtwo .two_nav .two_lis ul li a .lis_inner {
+  height: 40px;
+  width: 150px;
+  float: left;
+  margin-top: -12px;
+  margin-left: 10px;
+  line-height: 40px;
+}
+.boxtwo .two_nav .two_lis ul li a .lis_inner .lis_title {
+  font-size: 16px;
+  height: 20px;
+  color: #333333;
+}
+.boxtwo .two_nav .two_lis ul li a .lis_inner p {
+  font-size: 12px;
+  height: 10px;
+  color: #999999;
+}
+.boxtwo .two_nav .two_lis ul li a span {
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  background-image: url("/images/icon_bar.png");
+  background-size: 130px 130px;
+  background-position: 80px 122px ;
+  float: right;
+  transform: rotate(180deg);
+}
+.boxtwo .two_sales {
+  width: 100%;
+}
+.boxtwo .two_sales .two_title {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  margin: 8px 0px;
+  font-size: 15px;
+  padding-left: 15px;
+  color: #874604;
+}
+.boxtwo .two_sales .sales_lis ul {
+  padding: 0px 10px;
+}
+.boxtwo .two_sales .sales_lis ul li {
+  height: 140px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0px;
+}
+.boxtwo .two_sales .sales_lis ul li a {
+  display: inline-block;
+  width: 100%;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_left {
+  float: left;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_right {
+  margin-left: 120px;
+  font-size: 16px;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_right .right_top {
+  color: #333333;
+  font-size: 16px;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_right .right_sarts {
+  margin-top: 10px;
+  height: 35px;
+  position: relative;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_right .right_sarts .nub {
+  color: #EA3900;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_right .right_sarts .sarts {
+  float: right;
+  display: block;
+  margin-right: 30px;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_right .right_sarts .sarts span {
+  display: inline-block;
+  color: #FF9000;
+  font-size: 20px;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_right .right_button {
+  font-size: 12px;
+  color: #9F9F9F;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_right .right_button > em:first-of-type {
+  float: left;
+}
+.boxtwo .two_sales .sales_lis ul li a .sales_right .right_button > em:last-of-type {
+  float: right;
+  margin-right: 20px;
+}
+.boxtwo .two_users .two_title {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  margin: 8px 0px;
+  font-size: 15px;
+  padding-left: 15px;
+  color: #874604;
+}
+.boxtwo .two_users .users_lis ul {
+  padding: 0px 10px;
+}
+.boxtwo .two_users .users_lis ul li {
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 10px;
+}
+.boxtwo .two_users .users_lis ul li a {
+  display: block;
+  width: 100%;
+}
+.boxtwo .two_users .users_lis ul li a .users_top {
+  height: 100px;
+}
+.boxtwo .two_users .users_lis ul li a .users_top .pic {
+  float: left;
+  margin-left: 10px;
+}
+.boxtwo .two_users .users_lis ul li a .users_top .tit {
+  font-size: 16px;
+  padding-left: 130px;
+}
+.boxtwo .two_users .users_lis ul li .users_button {
+  box-shadow: inset;
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid #e7e7e7;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.boxtwo .two_users .users_lis ul li .users_button::after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 30px;
+  top: -7px;
+  border-bottom: 8px solid #f8f8f8;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+.boxtwo .two_users .users_lis ul li .users_button a {
+  display: block;
+  color: #999;
+  width: 100%;
+}
+.boxtwo .two_users .users_lis ul li .users_button a .users_name {
+  height: 20px;
+  width: 100%;
+}
+.boxtwo .two_users .users_lis ul li .users_button a .users_name .name {
+  font-size: 14px;
+}
+.boxtwo .two_users .users_lis ul li .users_button a .users_name .stars {
+  padding-right: 85px;
+}
+.boxtwo .two_users .users_lis ul li .users_button a .users_name .stars span {
+  display: inline-block;
+  color: #FF9000;
+  font-size: 20px;
+}
+.boxtwo .two_users .users_lis ul li .users_button a .users_name .time {
+  width: 30px;
+  float: right;
+  padding-right: 80px;
+}
+.boxtwo .two_users .users_lis ul li .users_button a .usersword {
+  margin-top: 10px;
+  color: #000;
+}

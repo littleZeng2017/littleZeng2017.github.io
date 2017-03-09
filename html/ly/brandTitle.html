@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>品牌大全</title>
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="/css/brand.css">
+</head>
+<body>
+<?php include('../common/header1.html')?>
+<div class="box">
+    <div class="list_header">
+        <a href="/index.html">首页</a>
+        >
+        <a href="">全部分类</a>
+    </div>
+    <div class="nav_title">热门品牌排行</div>
+    <div class="list_nav" id="list_nav">
+        <div class="nav_li">
+            <a href="">
+                <span></span>
+            </a>
+        </div>
+    </div>
+</div>
+<script id="list_ment" type="html/tempalte">
+    {{each list as value i}}
+    <div class="nav_li">
+         <a href="/html/ly/priceTwo.html?brandtitleid={{value.brandTitleId}}">{{value.brandTitle}}<span></span></a>
+    </div>
+    {{/each}}
+</script>
+<?php include('../common/footer.html')?>
+<?php include('../common/script.html')?>
+</body>
+</html>

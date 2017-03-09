@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>国内折扣列表</title>
+    <?php include('../common/style.html')?>
+    <style>
+        /*上拉刷新样式*/
+        #slideDown{margin-top: 0;width: 100%;}
+        #slideDown1,#slideDown2{width: 100%;height: 35px;background: #fff;display: none;}
+        #slideDown1{height: 20px; position: relative;}
+        #slideDown1>p{position: absolute; bottom: 0px;left: 50%;text-indent: -2em;}
+        #slideDown1>p,#slideDown2>p{margin: 0 auto;text-align:center;font-size: 14px;color: #37bbf5;}
+        /*下拉刷新样式*/
+        #slideUp{margin-top: 0;width: 100%;}
+        #slideUp1,#slideUp2{width: 100%;height: 35px;background: #fff;display: none;}
+        #slideUp1{height: 20px; position: relative;}
+        #slideUp1>p{position: absolute; top: 20px;left: 50%;text-indent: -2em;}
+        #slideUp1>p,#slideUp2>p{margin: 0 auto;text-align:center;font-size: 14px;color: #37bbf5;}
+    </style>
+</head>
+<body>
+    <?php include('../common/header1.html')?>
+    <!--栅格系统-->
+    <div class="container-fluid" id='cxdiv-box'>
+        <div id="slideDown">
+            <div id="slideDown1">
+                <p>松开刷新</p>
+            </div>
+            <div id="slideDown2">
+                <p><img src="/images/slideLoad.gif" alt="" width='35px' height='35px'></p>
+            </div>
+        </div>
+        <div class="row myContent" id='cxdiv'>
+            <ul id='discount_list'>
+                <!--模板的坑-->
+            </ul>
+        </div>
+    </div>
+    <!--上拉框-->
+    <div class="container-fluid" id='up-box'>
+        <div id="slideUp">
+            <div id="slideUp1">
+                <p>松开刷新</p>
+            </div>
+            <div id="slideUp2">
+                <p>
+                    <div>
+                        没有更多内容了
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <?php include('../common/footer.html')?>
+    <!--渲染模板-->
+    <script type='text/html' id='discount_list_tpl'>
+        {{ each result as value i }}
+        <li class="col-xs-6 col-sm-6 col-md-6" data-src="">
+            <a href="./discount_details.html?id={{ value.productId }}" title='{{ value.productName }}'>
+            <div class="img">
+                {{ #value.productImg }}
+            </div>
+                <div class="title">
+                    {{ value.productName }}
+                </div>
+                <div class="subtit">
+                    {{ value.productPrice }}
+                </div>
+                <div class="info">
+                    <div class="mall">
+                        {{ value.productFrom }} | {{ value.productTime }}
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+    <?php include('../common/script.html')?>
+</body>
+</html>

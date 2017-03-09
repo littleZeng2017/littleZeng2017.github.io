@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买登录</title>
+    <?php include('../common/style.html')?>
+</head>
+<body>
+    <?php include('../common/header1.html')?>
+<!--搜索框-->
+    <form action="javascript:;" name="frm">
+        <div id="ctl00_searchmmb" class="search1 clearfix">
+            <div class="searchtxt">
+                <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+            </div>
+            <div class="searchbtn">
+                <input type="submit" value="搜索">
+            </div>
+        </div>
+    </form>
+<!--登录框-->
+<form name="aspnetForm" method="post" action="login.aspx" id="aspnetForm">
+    <div style="padding: 8px 10px;">
+        <table class="loginTab">
+            <tbody>
+            <tr>
+                <td>
+                    <input name="ctl00$CPBODY$txtUser" type="text" id="ctl00_CPBODY_txtUser" class="score_t" value="用户名" onblur="if(this.value=='')this.value='用户名';" onclick="if(this.value=='用户名')this.value='';">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="ctl00$CPBODY$txtPass" type="password" id="ctl00_CPBODY_txtPass" class="score_t">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 3px;">
+                    <input type="submit" name="ctl00$CPBODY$btn_login" value="登录" id="ctl00_CPBODY_btn_login" class="login">
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; height: 36px;">
+                    <input id="ctl00_CPBODY_autoLogin" type="checkbox" name="ctl00$CPBODY$autoLogin" checked="checked">一个月内自动登陆
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="ctl00_CPBODY_diserror" style="font-size: 14px; height: 36px; color:Red;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 13px; color: #888; height: 20px;">
+                    忘记密码：请电脑登录www.manmanbuy.com找回
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
+<!--脚部-->
+<div id="ctl00_footerApp">
+    <div class="foot_top">
+        <a href="javascript:;">登录</a>
+        <a href="/html/User/reg.html">注册</a>
+        <a href="#" style="width: 40%; border: 0;">
+            <img src="/images/top.jpg" width="15" height="15">返回顶部</a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a>
+            <a href="javascript:;">
+                慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com
+            <img src="/images/top.jpg" width="0" height="0">
+        </p>
+    </div>
+</div>
+<?php include('../common/script.html')?>
+</body>
+</html>

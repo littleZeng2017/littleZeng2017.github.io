@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>国内白菜价</title>
+    <?php include('../common/style.html')?>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- 引入自己的css样式-->
+    <link rel="stylesheet" href="../../css/zy/cabbagePrice.css"/>
+    <style>
+        /*上拉刷新样式*/
+        #slideDown{margin-top: 0;width: 100%;}
+        #slideDown1,#slideDown2{width: 100%;height: 35px;background: #fff;display: none;}
+        #slideDown1{height: 20px; position: relative;}
+        #slideDown1>p{position: absolute; bottom: 0px;left: 50%;text-indent: -2em;}
+        #slideDown1>p,#slideDown2>p{margin: 0 auto;text-align:center;font-size: 14px;color: #37bbf5;}
+        /*下拉刷新样式*/
+        #slideUp{margin-top: 0;width: 100%;}
+        #slideUp1,#slideUp2{width: 100%;height: 35px;background: #fff;display: none;}
+        #slideUp1{height: 20px; position: relative;}
+        #slideUp1>p{position: absolute; top: 20px;left: 50%;text-indent: -2em;}
+        #slideUp1>p,#slideUp2>p{margin: 0 auto;text-align:center;font-size: 14px;color: #37bbf5;}
+    </style>
+
+</head>
+<body>
+<!-- 网页头部-->
+<header>
+    <div class="back">
+        <a href="/index.htmls" class="fa fa-angle-left"></a>
+    </div>
+    <p>白菜价-淘宝内部券</p>
+
+    <div class="download">
+        <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="icon-app"></a>
+    </div>
+    <div class="search">
+        <div class="search-content clearfix">
+            <input type="text" placeholder="搜索商品即可查内部券" class="txt-btn"/>
+            <input type="submit" value="搜索" class="search-btn"/>
+        </div>
+
+    </div>
+</header>
+
+<!-- 商品信息容器-->
+<div class="content">
+    <!-- 滑动导航条-->
+    <div class="slideNav">
+        <ul class="ui-navigator-list clearfix" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);">
+            <!-- 导航列表的坑-->
+        </ul>
+        <div class="searchBar">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-times"></i>
+        </div>
+    </div>
+    <div class="wrap">
+        <!--广告banner -->
+        <div class="adbanner" style="text-align: center;margin-top: 10px; margin-bottom: 10px; width: 100%;">
+            <img style="width: 100%;" src="http://misc.manmanbuy.com/images/quanpic/quan_banner_wap.png" alt="白菜价频道"
+                 _hover-ignore="1">
+        </div>
+        <!-- 商品信息列表-->
+        <div id="myContent">
+            <div id="slideDown">
+                <div id="slideDown1">
+                    <p>松开刷新加载更多</p>
+                </div>
+                <div id="slideDown2">
+                    <p><img src="/images/slideLoad.gif" alt="" width="35px" height="35px"></p>
+                </div>
+            </div>
+            <div class="shopList">
+                <!-- 商品信息模板的坑-->
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- 底部菜单-->
+<div class="menu">
+    <a href="/">首页&gt;</a>
+    <a href="/html/zy/cabbagePrice.html">白菜价</a>
+</div>
+<!-- app推荐下载-->
+<div class="appbanner  appbannerc">
+    <div class="applogo">
+        <img src="http://m.manmanbuy.com/download/images/logo.png">
+    </div>
+    <div class="tit" _hover-ignore="1">慢慢买APP
+        <div class="subtit" style="">
+            <p>给喜欢网购的同学推荐下[慢慢买]这个APP，第一时间更新国内外的优惠信息！</p>
+        </div>
+    </div>
+    <div class="btn">
+        <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('底部悬浮2下载');" class="a-install"
+           _hover-ignore="1">立即打开</a>
+    </div>
+</div>
+<!--底部 -->
+<?php include('../common/footer.html')?>
+
+<script type="text/template" id='nav-list-tpl'>
+    {{each list as value i}}
+    <li data-titleId='{{value.titleId}}'><a
+            href="/html/zy/cabbagePrice.html?titleid={{value.titleId}}">{{value.title}}</a></li>
+    {{/each}}
+</script>
+<!--商品数据模板-->
+<script type='text/template' id='shop-list-tpl'>
+    <ul>
+        {{each list as value}}
+        <li class="products">
+            <div class="pic">
+                {{#value.productImg}}
+            </div>
+            <div class="inf">
+                <div class="i">
+                    <div class="t">{{#value.productName}}</div>
+                    <div class="pr">
+                        {{#value.productPrice}}
+                    </div>
+                </div>
+                <div class="o">
+                    {{#value.productCouponRemain}}
+                    <div class="b clearfix">
+                        <div class="q">{{#value.productCoupon}}</div>
+                        <div class="g">{{#value.productHref}}</div>
+                    </div>
+
+                </div>
+            </div>
+        </li>
+        {{/each}}
+
+    </ul>
+</script>
+
+<?php include('../common/script.html')?>
+
+</body>
+</html>

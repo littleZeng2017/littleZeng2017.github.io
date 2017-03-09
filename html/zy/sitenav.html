@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>商场导航</title>
+    <?php include('../common/style.html')?>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/zy/navs.css"/>
+</head>
+<body>
+<!-- 网页头部-->
+<header>
+    <div class="back">
+        <a href="/index.html" class="fa fa-angle-left"></a>
+    </div>
+    <p>商场导航</p>
+    <!-- <div class="download">
+         <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="icon-app"></a>
+     </div>-->
+</header>
+<!--导航列表-->
+<nav class="clearfix">
+    <div class="row navs">
+        <!-- 导航数据的坑-->
+    </div>
+</nav>
+<!-- 底部菜单-->
+<div class="menu">
+    <a href="/">首页&gt;</a>
+    <a href="/html/zy/storenavs.html">商城导航</a>
+</div>
+<?php include('../common/footer.html')?>
+
+<script type="text/template" id='navs-tpl'>
+    {{each result as value}}
+    <div class="col-xs-4 col-md-3 wrap">
+        <a href="{{value.navHref}}" target="_blank">
+            <img src="{{value.navImg}}">
+            <p>{{value.navTitle}}</p>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<?php include('../common/script.html')?>
+
+</body>
+</html>

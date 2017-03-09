@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <?php include('../common/style.html')?>
+</head>
+<body>
+<!--头部部分-->
+<header class="clearfix">
+    <span class="iconfont icon-fanhui" id="coudan_back"></span>
+    <span class="iconfont icon-appxiazai"></span>
+    <h1><a href="/index.html" style="color: #fff">凑单品</a></h1>
+</header>
+<!--下拉导航-->
+<nav class="clearfix">
+    <div class="dropdown shop" id="coudan_shop_tpl">
+       <!-- 店铺填的坑-->
+    </div>
+    <div class="dropdown area" id="coudan_area_tpl">
+        <!-- 地区的坑-->
+    </div>
+    <div class="dropdown">
+        <a href="javascript:;" id="coudan_price" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           全部价格
+            <span class="iconfont icon-xiaosanjiao"></span>
+        </a>
+    </div>
+    <div class="coudan_search" id="coudan_search">
+        <a href="javascript:;"></a>
+    </div>
+    <ul id="coudan_hidden_shop">
+    <!-- 隐藏菜单的坑-->
+    </ul>
+    <ul id="coudan_hidden_area">
+        <!-- 隐藏菜单的坑-->
+    </ul>
+    <div id="coudan_hidden_search">
+        <div class="contain">
+            <span id="sousou" class="sousuo">搜索</span>
+            <div class="searchBar">
+                <span class="iconfont icon-sousuo_sousuo"></span>
+                <input type="text" placeholder="搜索您想要凑的单品"/>
+            </div>
+        </div>
+       <p>排序</p>
+        <ul class="paixu clearfix">
+            <li><a href="" class="active">销量</a></li>
+            <li><a href="">价格↑</a></li>
+            <li><a href="">价格↓</a></li>
+        </ul>
+        <p>分类</p>
+        <ul class="fenlei clearfix">
+            <li><a href="" class="active">全部</a></li>
+            <li><a href="">家居</a></li>
+            <li><a href="">数码</a></li>
+            <li><a href="">办公</a></li>
+            <li><a href="">个护</a></li>
+            <li><a href="">食品</a></li>
+            <li><a href="">母婴</a></li>
+            <li><a href="">服饰</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!--商品区-->
+<section class="clearfix">
+  <ul class="clearfix" id="coudan_product">
+      <!-- 商品区的坑-->
+
+  </ul>
+</section>
+
+
+
+<!--shop下拉模板-->
+<script type="text/tpl" id="shopTpl">
+    {{ each list as value i}}
+        <a href="javascript:;" class='coudan_shop' id="coudan_shop{{ value.shopId }}" shopId="{{ value.shopId }}" >
+            {{ value.shopName = value.shopId==0? value.shopName: ''}}
+            <span class="iconfont icon-xiaosanjiao xiaosanjiaoS"></span>
+        </a>
+        {{ /each }}
+</script>
+<!--area下拉模板-->
+<script type="text/tpl" id="areaTpl">
+    {{ each list as value i }}
+    <a href="javascript:;" class='coudan_area' id="coudan_area{{ value.areaId }}" areaId="{{ value.areaId}}" >
+            {{ value.areaName = value.areaId == 0? value.areaName: '' }}
+            <span class="iconfont icon-xiaosanjiao xiaosanjiaoA"></span>
+    </a>
+    {{ /each }}
+</script>
+<!--shop列表模板-->
+<script type="text/tpl" id="shop_hiddenTpl">
+
+        {{ each result as value i }}
+        <li><a href="javascript:;" shopHidden="{{ value.shopId }}" id="shop{{ value.shopId}}">{{ value.shopName}}</a></li>
+        {{ /each }}
+
+</script>
+<!--area列表模板-->
+<script type="text/tpl" id="area_hiddenTpl">
+
+        {{ each result as value i }}
+        <li><a href="javascript:;" areaHidden="{{ value.areaId }}" id="area{{ value.areaId}}">{{ value.areaName}}</a></li>
+        {{ /each }}
+
+</script>
+<!--商品模板-->
+<script type="text/tpl" id="coudan_productTpl">
+    {{ each list as value i }}
+    <li id="product{{ value.productId }} class="coudan_production"">
+          <a href="javascript:void(0);">
+              <div class="coudan_pic">
+                  <img src={{ value.productImg }}
+                       alt=""/>
+                  <p class="desc">{{ value.productName }}</p>
+                  <div class="bottom">
+                      <span class="coudan_price">{{ value.productPrice }}</span>
+                      <button>去凑单</button>
+                  </div>
+              </div>
+          </a>
+      </li>
+    {{ /each }}
+
+
+</script>
+<?php include('../common/script.html')?>
+</body>
+</html>

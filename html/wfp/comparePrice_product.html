@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>Title</title>
+    <?php include('../common/style.html')?>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/css/bj.css">
+</head>
+<body>
+<div id="bigBox">
+<div id="ctl00_header1" class="header1 clearfix">
+    <div class="f_left logo">
+        <a href="/index.html">
+            <img src="/images/header_logo.png"></a></div>
+    <div class="f_right appdown">
+        <a href="/index.html">
+            <img src="/images/header_app.png" alt="手机app下载">
+        </a>
+    </div>
+</div>
+
+<div id="ctl00_header2" style="display: none">
+    <div class="wx_tab_wrap">
+        <a href="javascript:;" class="wx_btn_search">搜索</a>
+        <span class="wx_tab_inner">
+                <a href="javascript:;">省钱控</a>
+                <a href="javascript:;">白菜价</a>
+                <a href="javascript:;">正品商城</a>
+        </span>
+        <a href="javascript:void(0);" class="wx_btn_my"></a>
+        <div class="wx_me_pop" style="display: none;">
+            <div class="wx_me_item">
+                <a href="javascript:;" class="wx_me_uc">个人中心</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="" method="get" name="frm" id='form_search'>
+    <div id="ctl00_searchmmb" class="search1 clearfix">
+        <div class="searchtxt ">
+            <input value="" name="key" type="search" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn">
+            <input type="submit" value="搜索">
+        </div>
+    </div>
+</form>
+<div id="ctl00_CPBODY_prolist" class="product-list-content">
+    <div class="reorder ui-border-b" id="reorder">
+        <ul>
+            <li><a href='javascript:;' title='按综合排序' class='on'>综合</a></li>
+            <li><a href='javascript:;' title='按销量排序'>销量</a></li>
+            <li class="price" id='price-sort'>价格<i class="fa fa-caret-up"></i></li>
+            <li class="filter"><a href="javascript:;"><i class="iconfont"></i>筛选</a></li>
+        </ul>
+    </div>
+    <div class="product-list">
+        <ul id='product-list_ul'>
+             <!-- 商品列表的坑-->
+        </ul>
+    </div>
+    <script type='text' id='product_tpl'>
+            {{ each result as value i }}
+                <li class="item ui-border-b" style="width:100%">
+                <a href="javascript:;" class="goto" data_id='{{ value.productId }}'></a>
+                <div class="pic">{{ #value.productImg }}</div>
+                <div class="clearfix inf">
+                    <div class="tit">{{ value.productName }}</div>
+                    <div class="price"> {{ value.productPrice }}</div>
+                    <div class="other">
+                        <div class="mall">{{ value.productQuote }}</div>
+                        <div class="sales">{{ value.productCom }}</div>
+                    </div>
+                </div>
+            </li>
+            {{ /each }}
+    </script>
+</div>
+
+<div class="page">
+    <table width="100%">
+        <tr>
+            <td><a id='a1' href='javascript:;'>上一页</a>
+            </td>
+            <td>
+                <select id="selectPage"
+                        style="border: 1px solid #bababa; font-size: 16px; height: 32px;padding-left:15px;padding-right: 15px; "
+                >
+                </select>
+            </td>
+            <td>
+                <a id='a2' href='javascript:;'>下一页</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+</div>
+<div id="ctl00CPBODYsearchField"  class="search-filter" >
+    <div class='headtit ui-border-b'>筛选<i class='iconfont icon-cuowu'></i></div>
+    <div class="group ui-border-tb field">
+        <div class='row'>
+            <div class='rowhead'><span class='tit'>品牌</span> <span class='selt'>全部品牌</span>
+                <span class='down iconfont icon-xiangxiajiantou'></span>
+            </div>
+            <div class='rowbody'>
+                <ul>
+                    <li class='on'><a href='javascript:;'>全部品牌</a></li>
+                    <li><a href='javascript:;'>三星</a></li>
+                    <li><a href='javascript:;'>创维</a></li>
+                    <li><a href='javascript:;'>TCL</a></li>
+                    <li><a href='javascript:;'>乐视</a></li>
+                    <li><a href='javascript:;'>海信</a></li>
+                    <li><a href='javascript:;'>长虹</a></li>
+                    <li><a href='javascript:;'>索尼</a></li>
+                    <li><a href='javascript:;'>康佳</a></li>
+                    <li><a href='javascript:;'>海尔</a></li>
+                    <li><a href='javascript:;'>夏普</a></li>
+                    <li><a href='javascript:;'>LG</a></li>
+                    <li><a href='javascript:;'>飞利浦</a></li>
+                    <li><a href='javascript:;'>微鲸</a></li>
+                    <li><a href='javascript:;'>小米</a></li>
+                    <li><a href='javascript:;'>酷开</a></li>
+                    <li><a href='javascript:;'>17TV</a></li>
+                    <li><a href='javascript:;'>暴风TV</a></li>
+                    <li><a href='javascript:;'>东芝</a></li>
+                    <li><a href='javascript:;'>熊猫</a></li>
+                    <li><a href='javascript:;'>清华同方</a></li>
+                    <li><a href='javascript:;'>联想</a></li>
+                    <li><a href='javascript:;'>惠科</a></li>
+                    <li><a href='javascript:;'>AOC</a></li>
+                    <li><a href='javascript:;'>先锋</a></li>
+                    <li><a href='javascript:;'>KKTV</a></li>
+                    <li><a href='javascript:;'>三洋</a></li>
+                    <li><a href='javascript:;'>乐华</a></li>
+                    <li><a href='javascript:;'>松下</a></li>
+                    <li><a href='javascript:;'>创佳</a></li>
+                    <li><a href='javascript:;'>统帅</a></li>
+                    <li><a href='javascript:;'>模卡</a></li>
+                    <li><a href='javascript:;'>哈呢</a></li>
+                    <li><a href='javascript:;'>京东方</a></li>
+                    <li><a href='javascript:;'>彩迅</a></li>
+                    <li><a href='javascript:;'>海力</a></li>
+                    <li><a href='javascript:;'>SVA</a></li>
+                    <li><a href='javascript:;'>现代</a></li>
+                    <li><a href='javascript:;'>美乐</a></li>
+                    <li><a href='javascript:;'>多方达</a></li>
+                    <li><a href='javascript:;'>新科</a></li>
+                    <li><a href='javascript:;'>风行电视</a></li>
+                    <li><a href='javascript:;'>欧宝丽</a></li>
+                    <li><a href='javascript:;'>PLATINA</a></li>
+                    <li><a href='javascript:;'>INESA</a></li>
+                    <li><a href='javascript:;'>日立</a></li>
+                    <li><a href='javascript:;'>卡萨帝</a></li>
+                    <li><a href='javascript:;'>其他</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='rowhead'><span class='tit'>品类</span> <span class='selt'>全部品类</span>
+                <span class='down iconfont icon-xiangxiajiantou'></span>
+            </div>
+            <div class='rowbody'>
+                <ul>
+                    <li class='on'><a href='javascript:;'>全部品类</a></li>
+                    <li><a href='javascript:;'>液晶电视</a></li>
+                    <li><a href='javascript:;'>曲面电视</a></li>
+                    <li><a href='javascript:;'>3D电视</a></li>
+                    <li><a href='javascript:;'>会议/广告机</a></li>
+                    <li><a href='javascript:;'>激光/影院电视</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='rowhead'><span class='tit'>尺寸</span> <span class='selt'>全部尺寸</span>
+                <span class='down iconfont icon-xiangxiajiantou'></span>
+            </div>
+            <div class='rowbody'>
+                <ul>
+                    <li class='on'><a href='javascript:;'>全部尺寸</a></li>
+                    <li><a href='javascript:;'>32英寸以下</a></li>
+                    <li><a href='javascript:;'>32英寸</a></li>
+                    <li><a href='javascript:;'>37-39英寸</a></li>
+                    <li><a href='javascript:;'>40-42英寸</a></li>
+                    <li><a href='javascript:;'>43-45英寸</a></li>
+                    <li><a href='javascript:;'>46-49英寸</a></li>
+                    <li><a href='javascript:;'>50-52英寸</a></li>
+                    <li><a href='javascript:;'>55-58英寸</a></li>
+                    <li><a href='javascript:;'>60-65英寸</a></li>
+                    <li><a href='javascript:;'>65英寸以上</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='rowhead'><span class='tit'>分辨率</span> <span class='selt'>全部分辨率</span> <span
+                    class='down iconfont icon-xiangxiajiantou'></span></div>
+            <div class='rowbody'>
+                <ul>
+                    <li class='on'><a href='javascript:;'>全部分辨率</a></li>
+                    <li><a href='javascript:;'>超高清4K</a></li>
+                    <li><a href='javascript:;'>全高清1080P</a></li>
+                    <li><a href='javascript:;'>高清720P</a></li>
+                    <li><a href='javascript:;'>其它</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='rowhead'><span class='tit'>功能</span> <span class='selt'>全部功能</span>
+                <span class='down iconfont icon-xiangxiajiantou'></span>
+            </div>
+            <div class='rowbody'>
+                <ul>
+                    <li class='on'><a href='javascript:;'>全部功能</a></li>
+                    <li><a href='javascript:;'>智能网络电视</a></li>
+                    <li><a href='javascript:;'>普通电视</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='rowhead'><span class='tit'>3D</span> <span class='selt'>全部3D</span>
+                <span class='down iconfont icon-xiangxiajiantou'></span>
+            </div>
+            <div class='rowbody'>
+                <ul>
+                    <li class='on'><a href='javascript:;'>全部3D</a></li>
+                    <li><a href='javascript:;'>支持3D</a></li>
+                    <li><a href='javascript:;'>不支持3D</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='rowhead'><span class='tit'>观看距离</span> <span class='selt'>全部观看距离</span> <span
+                    class='down iconfont icon-xiangxiajiantou'></span></div>
+            <div class='rowbody'>
+                <ul>
+                    <li class='on'><a href='javascript:;'>全部观看距离</a></li>
+                    <li><a href='javascript:;'>小卧室（1.7米以下）</a></li>
+                    <li><a href='javascript:;'>小客厅/卧室（1.8~2.5米）</a></li>
+                    <li><a href='javascript:;'>小客厅/卧室（2.6~3.0米）</a></li>
+                    <li><a href='javascript:;'>中客厅（3.1~4.0米）</a></li>
+                    <li><a href='javascript:;'>大客厅（4.1~5.0米）</a></li>
+                    <li><a href='javascript:;'>大客厅（5.0米以上）</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='rowhead'><span class='tit'>价格</span> <span class='selt'>全部价格</span>
+                <span class='down iconfont icon-xiangxiajiantou'></span>
+            </div>
+            <div class='rowbody'>
+                <ul>
+                    <li class='on'><a href='javascript:;'>全部价格</a></li>
+                    <li><a href='javascript:;'>1-1499</a></li>
+                    <li><a href='javascript:;'>1500-2999</a></li>
+                    <li><a href='javascript:;'>3-4499</a></li>
+                    <li><a href='javascript:;'>4500-5999</a></li>
+                    <li><a href='javascript:;'>6-7999</a></li>
+                    <li><a href='javascript:;'>8-9999</a></li>
+                    <li><a href='javascript:;'>10以上</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='rowhead'><span class='tit'>评分</span> <span class='selt'>全部评分</span>
+                <span class='down iconfont icon-xiangxiajiantou'></span>
+            </div>
+            <div class='rowbody'>
+                <ul>
+                    <li class='on'><a href='javascript:;'>全部评分</a></li>
+                    <li><a href='javascript:;'>4.8分及以上</a></li>
+                    <li><a href='javascript:;'>4.6分及以上</a></li>
+                    <li><a href='javascript:;'>4.4分及以上</a></li>
+                    <li><a href='javascript:;'>4.2分及以上</a></li>
+                    <li><a href='javascript:;'>4分及以上</a></li>
+                    <li><a href='javascript:;'>3.5分及以上</a></li>
+                    <li><a href='javascript:;'>3分及以上</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div >
+<!--遮罩层-->
+<div class="mask"></div>
+<?php include('../common/footer.html')?>
+<?php include('../common/script.html')?>
+</body>
+</html>

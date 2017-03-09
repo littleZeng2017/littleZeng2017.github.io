@@ -1,0 +1,243 @@
+header {
+  .container {
+    width: 100%;
+    height: 44px;
+    background-color: #ff841d;
+    position:relative ;
+
+    >.row {
+      margin-left: -15px;
+      margin-right: -15px;
+      width: 100%;
+      height: 44px;
+
+      a {
+        position: absolute;
+        width: 50px;
+        height: 44px;
+        &.header-app{
+          right: 0;
+          top: 5px;
+        }
+        &.left-arrow{
+          font-size: 20px;
+          top: 0;
+          left: 0;
+        }
+        i{
+          font-size: 30px;
+          color: #fff;
+          padding-left: 20px;
+        }
+      }
+      p {
+        width: 100%;
+        height: 44px;
+        color: #fff;
+        font-size: 20px;
+        font-family:"宋体";
+        font-weight: bold;
+        text-align: center;
+        line-height: 44px;
+      }
+
+    }
+  }
+}
+  //==========================
+  //商品列表样式
+  .section_money {
+    .container{
+      width: 100%;
+      min-width: 320px;
+      margin: 0 auto;
+      position: relative;
+      > #product-father {
+        width: 100%;
+        margin: 0px auto;
+         > li {
+          width: 100%;
+          padding: 14px 8px;
+          position: relative;
+          border-bottom: 1px solid #ccc;
+          > a {
+            display: block;
+            text-decoration: none;
+
+            .pic {
+              float: left;
+              width: 110px;
+              img {
+                width: 100px;
+                height: 100px;
+                vertical-align: middle;
+                border: none;
+              }
+            }
+            .info {
+              padding-left: 120px;
+              font-size: 14px;
+              font-family: "宋体";
+              line-height: 24px;
+              .title {
+                color: #333333;
+                word-break: break-all;
+                font-size: 15px;
+                line-height: 19px;
+                min-height: 57px;
+                text-align: left;
+                font-weight: normal;
+                span {
+                  color: #ff6c00;
+                  display: inline;
+                }
+              }
+              .other {
+                margin-top: 8px;
+                color: #a1a1a1;
+                span {
+                  display: inline-block;
+                }
+                .mall {
+                  color: #a1a1a1;
+                  font-size: 12px;
+                  float: left;
+                }
+                .comment {
+                  color: #a1a1a1;
+                  font-size: 12px;
+                  float: right;
+                }
+              }
+            }
+          }
+        }
+      }
+      //提交按钮
+      .page-select {
+        position: relative;
+        width: 100%;
+        min-width: 320px;
+         a {
+          text-decoration: none;
+          width: 82px;
+          height: 33px;
+          background-color: #ccc;
+          color: black;
+          border-radius: 5px;
+          text-align: center;
+          font-size: 14px;
+          font-family: "宋体";
+          line-height: 33px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        .dropup {
+          position: absolute;
+          left: 45%;
+          margin: 20px auto;
+          .dropdown-menu {
+            padding: 0;
+            > li.left-pad {
+              padding: 2px 50px;
+            }
+            > li.active {
+              background-color: #ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+//底部
+footer{
+  .footer-nav{
+    width: 100%;
+    height: 36px;
+    background-color: #ebebeb;
+    border-top: solid 1px #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: 8px;
+    font-family: "宋体";
+    font-size: 14px;
+    a{
+      color: black;
+    }
+  }
+}
+
+//最下面
+.f-bottom{
+  margin-top: 25px;
+    width: 100%;
+    //padding-top: 10px;
+    height: 94px;
+    background-color: #EFEFEF;
+    .footer_fun{
+      >a{
+        color: black;
+        text-decoration: none;
+        display: block;
+        height: 34px;
+        line-height: 34px;
+        box-sizing: border-box;
+        float: left;
+        font-size:14px;
+        border:1px solid #c4c4c4;
+        border-left: none;
+        text-align: center;
+        width: 30%;
+        font-family: '宋体';
+        >img{
+          width: 15px;
+          height: 15px;
+          vertical-align: -5% ;
+
+        }
+      }
+      .footer_last{
+        width: 40%;
+      }
+    }
+    .footer_bottom{
+      margin-top: 10px;
+      width: 100%;
+      font-size: 12px;
+      text-align: center;
+      >p{
+        //font-family: '宋体';
+        color:#5a5a5a;
+        .m-phone{
+         color: black;
+          text-decoration: none;
+        }
+      }
+      .footer_red{
+        color:red;
+      }
+      .footer_net{
+        margin-top: -13px;
+
+      }
+    }
+
+
+}
+
+//底部固定定位图标
+.fix-app {
+  position: fixed;
+  position: fixed;
+  right: 0px;
+  bottom: 30px;
+  z-index: 999;
+  a > img {
+    width: 60px;
+    height: 67px;
+  }
+}
+
+
+
+

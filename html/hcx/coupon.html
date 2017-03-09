@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>优惠券</title>
+    <!--<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.css">-->
+    <!--<link rel="stylesheet" href="/css/base.css">-->
+    <?php include('../common/style.html')?>
+    <link rel="stylesheet" href="../../css/hcx/cheepCart.css"/>
+    <!--[if lt IE 9]>
+    <!--<script src="../lib/html5shiv/html5shiv.min.js"></script>-->
+    <!--<script src="../lib/respond/respond.js"></script>-->
+    <!--<![endif]&ndash;&gt;-->
+</head>
+<body>
+<!--页面的整体盒子-->
+<div class="layout   clearfix">
+    <header class="cheepCart-header ">
+        <a class="back  icon-chevron-left" href="#">&lt;
+            <i class="icon-chevron-left icon-white"></i>
+        </a>
+        <span class="title "> 优惠券 </span>
+        <a class="download " href="#"></a>
+    </header>  <!--头部-->
+
+    <!--中部优惠商品-->
+    <div class="box-cart ">
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="cart col-xs-4">-->
+                    <!--<ul>-->
+                        <!--<li><a href="#">-->
+                            <!--<img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt=""/>-->
+                            <!--<span>肯德基</span>-->
+                        <!--</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="cart col-xs-4">-->
+                    <!--<ul>-->
+                        <!--<li><a href="#">-->
+                            <!--<img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt=""/>-->
+                            <!--<span>肯德基</span>-->
+                        <!--</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="cart col-xs-4">-->
+                    <!--<ul>-->
+                        <!--<li><a href="#">-->
+                            <!--<img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt=""/>-->
+                            <!--<span>肯德基</span>-->
+                        <!--</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                 <!--<div class="cart col-xs-4">-->
+                    <!--<ul>-->
+                        <!--<li><a href="#">-->
+                            <!--<img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt=""/>-->
+                            <!--<span>肯德基</span>-->
+                        <!--</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+
+
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+    <!--中部切换 快捷栏-->
+    <div class="shortcut  clearfix">
+        <a href="#">首页</a>&nbsp;>&nbsp;
+        <a href="#">优惠券</a>
+    </div>
+
+
+
+</div>
+
+<script type="text/tpl" id="cheepCard">
+        <div class="container">
+            <div class="row">
+                {{ each result }}
+                <div class="cart col-xs-4">
+                    <ul>
+                        <li><a href="{{ $value.couponLink }}?id={{ $value.couponId }}&couponTitle={{ $value.couponTitle }}">
+                            <img src="{{ $value.couponImg }}" alt=""/>
+                            <span>{{ $value.couponTitle}}</span>
+                        </a></li>
+                    </ul>
+                </div>
+                {{ /each }}
+            </div>
+        </div>
+</script>
+<!--底部公共部分-->
+<footer class="footer">
+    <div class="footer-top clearfix">
+        <a href="#" class="login">登录</a>
+        <a href="#" class="sign">注册</a>
+        <a href="#" class="back-Top">
+            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""/>
+            返回顶部
+        </a>
+    </div>
+    <div class="footer-bottom">
+        <p class="txt">
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            ---掌上比价平台
+        </p>
+        <a class="url">m.manmanmai.com</a>
+    </div>
+
+    <!--固定地位的手机app图片-->
+    <div class="fix-app">
+        <a href="#"><img
+                src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png"
+                alt=""/></a>
+    </div>
+
+</footer>
+<!--<script src="../../lib/jquery/jquery.min.js"></script>-->
+<!--<script src="../../js/common/util.js"></script>-->
+<!--<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>-->
+<!--<script src="../../lib/artTemplate/template.js"></script>-->
+<?php include('../common/script.html')?>
+<!--<script src="../../js/hcx/cheepCard.js"></script>-->
+</body>
+</html>
+

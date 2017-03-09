@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <?php include('./html/common/style.html')?>
+    <link rel="stylesheet" href="/css/index.css"/>
+
+</head>
+<body style='overflow:-Scroll;overflow-x:hidden'>
+	<!-- 头部公共部分-->
+    <header class="mmm_header clearfix" id="target">
+        <div class="header_left">
+            <a href="javascript:;">
+                <img src="/images/header_logo.png" alt=""/>
+            </a>
+        </div>
+        <div class="header_right">
+            <a href="javascript:;">
+                <img src="/images/header_app.png" alt=""/>
+            </a>
+        </div>
+    </header>
+    <!--搜索框部分-->
+    <div class="mmm_search">
+        <form action="">
+            <input type="text" placeholder="请输入你想比价的商品"/>
+        </form>
+        <a href="javascript:;">搜索</a>
+    </div>
+    <!-- 菜单部分-->
+    <section id="menu">
+        <div class="row">
+
+        </div>
+    </section>
+    <!-- 超值折扣推荐-->
+    <a href="" class="discount clearfix">
+        <h2>超值折扣推荐</h2>
+        <img src="../../images/more.png" alt=""/>
+    </a>
+    <!-- 商品展示部分-->
+    <div class="container">
+        <ul id="goods_display">
+            <!--<li>-->
+                <!--<a href="" class="clearfix">-->
+                    <!--<div class="goods_img">-->
+                        <!--<img src="" alt=""/>-->
+                    <!--</div>-->
+                    <!--<div class="goods_info_top">-->
+                        <!--<span>啦啦啦啦</span>-->
+                        <!--<span>$18</span>-->
+                    <!--</div>-->
+                    <!--<div class="goods_info_bottom">-->
+                        <!--<span>美国亚马逊</span>-->
+                        <!--<div class="goods_commen">-->
+                            <!--<img src="./images/01.svg" alt=""/>-->
+                            <!--<i></i>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <!-- 更多优惠-->
+    <div class="more_bar">
+        <a href="">更多优惠信息 »</a>
+    </div>
+    <!-- 品牌排行-->
+    <div class="ranking_box">
+        <a href="" class="ranking_list clearfix">
+            <p>品牌排行</p>
+            <img src="../../images/more.png" alt=""/>
+        </a>
+    </div>
+    <!-- 底部公共样式-->
+    <footer>
+        <div class="footer_fun clearfix">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="" class="footer_last">
+                <img src="../../images/top.jpg" alt=""/>返回顶部
+            </a>
+        </div>
+        <div class="footer_bottom">
+            <p><a href="#target" class="footer_red">手机APP下载</a><a href="">慢慢买手机版</a>--掌上比价平台</p>
+            <p class="footer_net">m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+    <!--固定地位的手机app图片-->
+        <div class="fix-app">
+            <a href="#"><img
+                    src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png"
+                    alt=""/></a>
+        </div>
+    </footer>
+</body>
+<script type="text/tpl" id="nav-tpl">
+{{each result as value i}}
+<div class="col-xs-3 wrap">
+    <a href="{{pathData[i]}}/{{value.titlehref}}">
+        <div class="pic">
+            {{#value.img | format}}
+        </div>
+        <div class="name">{{value.name}}</div>
+    </a>
+</div>
+{{/each}}
+
+</script>
+<script type="text/tpl" id="goods_tpl">
+    {{each result as value i}}
+    <li value='{{value.productId}}'>
+                <a href="" class="clearfix">
+                    <div class="goods_img">
+                        {{#value.productImgSm}}
+                    </div>
+                    <div class="goods_info_top">
+                        <span>{{value.productName}}</span>
+                        <span class="goods_color">{{value.productPinkage}}</span>
+                    </div>
+                    <div class="goods_info_bottom">
+                        <span>{{value.productFrom}}|{{value.productTime}}</span>
+                        <div class="goods_commen">
+                            <img src="/images/01.svg" alt=""/>
+                            <span>{{value.productComCount |format }}</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+    {{/each}}
+</script>
+<?php include('./html/common/script.html')?>
+</html>

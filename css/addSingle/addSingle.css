@@ -1,0 +1,266 @@
+header {
+  width: 100%;
+  height: 44px;
+  background-color: #ff8b00;
+}
+header span {
+  float: left;
+  width: 40px;
+  height: 100%;
+  color: #ffffff;
+}
+header span.icon-fanhui {
+  font-size: 34px;
+}
+header h1 {
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 24px;
+  line-height: 44px;
+  color: #ffffff;
+  text-align: center;
+  height: 100%;
+  margin-top: 0;
+}
+header span.icon-appxiazai {
+  float: right;
+  font-size: 34px;
+}
+nav {
+  height: 38px;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  position: relative;
+}
+nav .dropdown {
+  width: 30%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+nav .dropdown a {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  line-height: 38px;
+  text-decoration: none;
+  color: #666;
+}
+nav .coudan_search {
+  float: right;
+  width: 40px;
+  height: 38px;
+  background-color: yellow;
+}
+nav .coudan_search a {
+  text-decoration: none;
+  color: #666;
+  width: 40px;
+  height: 38px;
+  display: block;
+  box-sizing: border-box;
+  background: url('../../images/coudan_search.png');
+  background-position: 0px 0px;
+  background-origin: content-box;
+  border-left: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+nav #coudan_hidden_shop {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  top: 38px;
+}
+nav #coudan_hidden_shop li {
+  border-bottom: 1px solid #cccccc;
+  height: 40px;
+}
+nav #coudan_hidden_shop li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+  padding-left: 10px;
+  line-height: 40px;
+}
+nav #coudan_hidden_area {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  top: 38px;
+}
+nav #coudan_hidden_area li {
+  border-bottom: 1px solid #cccccc;
+  height: 40px;
+}
+nav #coudan_hidden_area li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+  padding-left: 10px;
+  line-height: 40px;
+}
+nav #coudan_hidden_search {
+  display: none;
+  width: 100%;
+  background-color: #F1F1F1;
+  position: absolute;
+  top: 38px;
+  border-bottom: 1px solid #cccccc;
+  z-index: 1000;
+  padding: 10px;
+}
+nav #coudan_hidden_search .contain {
+  height: 35px;
+  padding-right: 40px;
+  width: 100%;
+  background-color: #F1F1F1;
+}
+nav #coudan_hidden_search .contain .sousuo {
+  height: 38px;
+  float: right;
+  margin-right: -46px;
+  width: 40px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 38px;
+}
+nav #coudan_hidden_search .contain .searchBar {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+}
+nav #coudan_hidden_search .contain .searchBar span {
+  float: left;
+  font-size: 16px;
+  width: 40px;
+  color: #cccccc;
+  line-height: 35px;
+  text-align: center;
+}
+nav #coudan_hidden_search .contain .searchBar input {
+  border: none;
+  width: 80%;
+  height: 100%;
+  line-height: 38px;
+  font-size: 16px;
+}
+nav #coudan_hidden_search p {
+  font-size: 16px;
+  position: relative;
+  margin-top: 20px;
+}
+nav #coudan_hidden_search ul {
+  width: 100%;
+}
+nav #coudan_hidden_search ul .active {
+  border: 1px solid #ff9501;
+  background-color: #ff9501;
+}
+nav #coudan_hidden_search ul.paixu {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 5px;
+}
+nav #coudan_hidden_search ul.paixu li {
+  width: 20%;
+  float: left;
+  margin: 5px;
+  margin-left: 0px;
+}
+nav #coudan_hidden_search ul.paixu li a {
+  width: 100%;
+  height: 31px;
+  display: block;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 31px;
+  font-size: 14px;
+}
+nav #coudan_hidden_search ul.fenlei li {
+  width: 20%;
+  float: left;
+  margin: 5px;
+  margin-left: 0px;
+}
+nav #coudan_hidden_search ul.fenlei li a {
+  width: 100%;
+  height: 31px;
+  border: 1px solid #cccccc;
+  display: block;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 31px;
+  font-size: 14px;
+}
+section.coudan_last_product {
+  width: 100%;
+}
+section.coudan_last_product ul {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+section.coudan_last_product ul li {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+section.coudan_last_product ul li a {
+  text-decoration: none;
+  color: #666;
+  display: block;
+  width: 100%;
+}
+section.coudan_last_product ul li a .coudan_pic {
+  background-color: #fff;
+  margin: 5px;
+  padding: 36px 36px 10px 36px;
+  box-sizing: border-box;
+}
+section.coudan_last_product ul li a .coudan_pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section.coudan_last_product ul li a .coudan_pic p {
+  color: #333333;
+  word-break: break-all;
+  padding: 0 6px;
+  height: 14px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 6px;
+}
+section.coudan_last_product ul li a .coudan_pic .bottom {
+  position: relative;
+  height: 20px;
+}
+section.coudan_last_product ul li a .coudan_pic .bottom span {
+  font-size: 18px;
+  color: red;
+  line-height: 20px;
+}
+section.coudan_last_product ul li a .coudan_pic .bottom button {
+  position: absolute;
+  height: 30px;
+  background-color: #ff8b00;
+  width: 80px;
+  right: -28px;
+  bottom: -4px;
+  border-radius: 5px;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  line-height: 30px;
+}
